@@ -8,9 +8,9 @@ export default function Home() {
     <main className='mx-auto'>
       <Landing />
       <DivLogos />
-      <TrajectorySection />
       <ProjectsSection />
-      <ContactSection/>
+      <TrajectorySection />
+      {/* <ContactSection/> */}
     </main>
   )
 }

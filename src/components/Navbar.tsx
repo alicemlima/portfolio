@@ -16,17 +16,17 @@ const NAV_ITEMS: Array<NavItem> = [
         page: "home",
     },
     {
-        label: "Trajectory",
-        page: "trajectory",
-    },
-    {
-        label: "Projects",
+        label: "Projetos",
         page: "projects",
     },
     {
-        label: "Contact",
-        page: "Contact",
+        label: "Trajetória",
+        page: "trajectory",
     },
+    // {
+    //     label: "Contatos",
+    //     page: "contact",
+    // },
 ]
 
 export default function NavBar() {

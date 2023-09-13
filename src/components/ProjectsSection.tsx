@@ -8,57 +8,55 @@ interface ProjectItem {
   github: string
   link: string
 }
+
 const PROJECT_ITEMS: Array<ProjectItem> = [
   {
-    name: "Thankful Thoughts",
+    name: "14º CBGDP",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/Screenshot.png",
+      "Desenvolvimento e Design do site do 14º Congresso Brasileiro de Inovação e Gestão de Desenvolvimento do Produto. O projeto foi realizado em NEXTJS. ",
+    image: "",
     github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+    link: "https://www.igdp.org.br/cbgdp2023/",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/Screenshot.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "SmartList",
+    description: "Projeto em SpringBoot utilizando conhecimentos de RESTful, testes unitários e banco de dados.",
+    image: "",
+    github: "https://github.com/alicemlima/smart-list/tree/master",
+    link: "https://github.com/alicemlima/smart-list/tree/master",
   },
   {
-    name: "Kator Family Photos",
-    description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/Screenshot.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
-  },
+    name: "Portfólio",
+    description: "Site para portfólio pessoal desenvolvido e idealizado por mim .",
+    image: "",
+    github: "/",
+    link: "https://github.com/alicemlima/portfolio",
+  }
 ]
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className=" grid h-screen md:max-h-[60vh] justify-items-center items-center m-4">
-      <div >
+    <section id="projects" className="grid h-screen justify-items-center items-center m-4">
+      <div className=" min-h-[70vh] space-y-20 xl:space-y-32" >
         <h1 className=" my-10 text-center font-bold text-6xl sm:text-7xl">
-        <span className='text-light-pink'>3. </span> Projetos
+        <span className='text-light-pink'>2. </span> Projetos
         </h1>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <div className=" grid grid-cols-1 gap-8 mt-16 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
           
-        {PROJECT_ITEMS.map((item, key) => {
-            return (
-            <a href="#" className="shadow-lg max-w-md transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-8 space-y-3 border-2 rounded-xl">
-              <div><AiOutlineGithub size={35} /></div>
+          {PROJECT_ITEMS.map((item, key) => {
+              return (
+              <a href={item.link} className="shadow-lg max-w-md transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-8 space-y-3 border-2 rounded-xl">
+                <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white" key={key}>{item.name}</h1>
 
-              <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white" key={key}>{item.name}</h1>
+                <p className="text-gray-500 dark:text-gray-300">
+                  {item.description}
+                </p>
 
-              <p className="text-gray-500 dark:text-gray-300">
-                {item.description}
-              </p>
-
-              
-            </a>)
-          })}
-          </div>
+                
+              </a>)
+            })}
+        </div>
       </div>
     </section>
   )
