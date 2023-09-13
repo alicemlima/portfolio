@@ -46,7 +46,7 @@ const ProjectsSection = () => {
           
           {PROJECT_ITEMS.map((item, key) => {
               return (
-              <a href={item.link} className="shadow-lg max-w-md transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-8 space-y-3 border-2 rounded-xl">
+              <a key={key} href={item.link} className="shadow-lg max-w-md transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 p-8 space-y-3 border-2 rounded-xl">
                 <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white" key={key}>{item.name}</h1>
 
                 <p className="text-gray-500 dark:text-gray-300">

@@ -37,9 +37,9 @@ const TrajectorySection = () => {
                 <h1 className='text-7xl font-bold'><span className='text-light-pink'>2.</span>Trajetória</h1>
             </div>
             <div className="relative border-l-2 ml-4 sm:ml-36 py-32 px-2 sm:px-8 col-span-5 lg:col-span-4 ">
-                {TRAJECTORY_ITEMS.map((item) => {
+                {TRAJECTORY_ITEMS.map((item, key) => {
                     return (
-                        <div className="mb-10 ml-4">
+                        <div key={key} className="mb-10 ml-4">
                             <span className=" animate-ping absolute w-3 h-3 bg-dark-black dark:bg-dark-almond rounded-full sm:mt-6 mt-2 -left-2" />
                             <span className=" absolute w-3 h-3 bg-dark-black dark:bg-dark-almond rounded-full sm:mt-6 mt-2 -left-2" />
                             <time className="sm:absolute mb-1 text-2xl sm:mt-4 mt-1 left-0 sm:-left-24">{item.date}</time>
